@@ -15,7 +15,7 @@ export const pathCategoryNoteImg = (categoryNote) => {
       pathImg = commentImg;
       break;
     default:
-      console.log("Invalid path image Note");
+      console.log("Invalid path to image Note");
   }
   return pathImg;
 };
