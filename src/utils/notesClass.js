@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 import { formatDateToYYYYMMDD } from "./formatDate";
 import { dateRegex } from "../data/dataRegex";
 
@@ -41,7 +43,7 @@ export default class userNotesClass {
   addNewNote(name, content, category) {
     const dates = content.match(dateRegex);
     const newNotes = {
-      id: 12,
+      id: uuidv4(),
       name: name,
       created: formatDateToYYYYMMDD(new Date()),
       category: category,
@@ -60,6 +62,23 @@ export default class userNotesClass {
       }
       return note;
     });
+  }
+
+  editNote(id, name, content, category) {
+    const dates = content.match(dateRegex);
+    const deleteOldNote = this.allNotes.filter(
+      (note) => note.id !== Number(id)
+    );
+    const newNote = {
+      id: uuidv4(),
+      name: name,
+      created: formatDateToYYYYMMDD(new Date()),
+      category: category,
+      content: content,
+      dates: dates ? dates : "",
+      archive: false,
+    };
+    this.allNotes = [newNote, ...deleteOldNote];
   }
 
   deleteNote(id) {

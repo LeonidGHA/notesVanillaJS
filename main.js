@@ -3,7 +3,7 @@ import { renderAllNotesList } from "./src/page-components/AllNotesList/AllNotesL
 import { summaryNotesList } from "./src/page-components/summaryNotesList/summaryNotesList";
 
 import "./src/js/modal";
-import "./src/js/addedNoteForm";
+import "./src/js/Form";
 import "./src/js/logicNote";
 
 import userNotesClass from "./src/utils/notesClass";
