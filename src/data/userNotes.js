@@ -9,7 +9,7 @@ export const userNotes = [
     archive: true,
   },
   {
-    id: " 2",
+    id: "2",
     name: "Evolutions",
     created: "04-27-2021",
     category: "Random Thought",
