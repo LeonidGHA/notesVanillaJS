@@ -2,7 +2,7 @@ import { renderAllNotesList } from "./src/page-components/AllNotesList/AllNotesL
 import { summaryNotesList } from "./src/page-components/summaryNotesList/summaryNotesList";
 
 import userNotesClass from "./src/utils/notesClass";
-import { userNotes } from "./src/data/UserNotes";
+import { userNotes } from "./src/data/userNotes";
 
 const activeNotesEl = document.querySelector("#allNotes");
 const summaryNotesEl = document.querySelector("#summaryNotes");
