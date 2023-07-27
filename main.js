@@ -1,7 +1,3 @@
-import "./src/js/modal";
-import "./src/js/Form";
-import "./src/js/logicNote";
-
 import { renderAllNotesList } from "./src/page-components/AllNotesList/AllNotesList";
 import { summaryNotesList } from "./src/page-components/summaryNotesList/summaryNotesList";
 
