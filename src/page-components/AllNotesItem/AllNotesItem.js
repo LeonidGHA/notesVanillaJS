@@ -1,4 +1,5 @@
 import { pathCategoryNoteImg } from "../../utils/pathCategoryNoteImg";
+import { renderFormatDate } from "../../utils/formatDate";
 
 export const AllNotesItem = (note) => {
   const { id, name, created, category, content, dates } = note;
@@ -7,12 +8,12 @@ export const AllNotesItem = (note) => {
         category
       )}' width='24px' height='24px'></div> 
       <span class="truncate col-start-2 col-span-2">${name}</span>
-      <span class="truncate col-span-2">${created}</span>
+      <span class="truncate col-span-2">${renderFormatDate(created)}</span>
       <span class="truncate col-span-2">${category}</span>
       <p class="truncate col-span-2">${content}</p>
       <span class="truncate col-span-2">${dates}</span>
-      <div>rew</div>
-      <div>arh</div>
-      <div>del</div>
+      <div >rew</div>
+      <div data-archive="${id}">arh</div>
+      <div data-delete="${id}">del</div>
     </li>`;
 };

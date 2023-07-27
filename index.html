@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,44 +9,62 @@
   <body>
     <div id="app">
       <main class="main">
-        <ul id="AllNotes" class="flex flex-col gap-4 mb-10">
-         
-        </ul>
-        <button type="button" id="toggleModal" class="flex px-4 py-2 w-full max-w-[120px] ml-auto bg-slate-300 rounded mb-10">Create Note</button>
+        <ul id="AllNotes" class="flex flex-col gap-4 mb-10"></ul>
+        <button
+          type="button"
+          id="toggleModal"
+          class="flex px-4 py-2 w-full max-w-[120px] ml-auto bg-slate-300 rounded mb-10"
+        >
+          Create Note
+        </button>
         <ul id="summaryNotes" class="flex flex-col gap-4 mb-10">
-          <li class="grid grid-cols-3 gap-4 bg-slate-400 p-5 rounded ">
+          <li class="grid grid-cols-3 gap-4 bg-slate-400 p-5 rounded">
             <span class="pl-10">Note Category</span>
             <span class="text-center">Active</span>
             <span class="text-center">Archived</span>
           </li>
         </ul>
 
-        <div id='backdrop' class="hidden">
-          <div id="modal" class="bg-white p-5 flex flex-col ">
+        <div id="backdrop" class="hidden">
+          <div id="modal" class="bg-white p-5 flex flex-col">
             <button class="ml-auto" type="button" id="modalClose">Close</button>
-            <form class="flex flex-col  gap-5 w-[70vw] max-w-md" id="form">
+            <form class="flex flex-col gap-5 w-[70vw] max-w-md" id="form">
               <label>
                 Name Note
-                <input type="text" name="name" class="border-slate-400 border w-full"></label>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  class="border-slate-400 border w-full"
+              /></label>
               <label>
                 Content
-                <input type="text" name="content" class="border-slate-400 border w-full"></label>
-              <label class="mx-auto"><input type="date" name="date" class="border-slate-400 border "></label>
-              <label class="mx-auto"><select name="category" class="border-slate-400 border"><option value="" disabled selected hidden>Category</option>
-              <option value="Random Thought" >
-                Random Thought
-              </option>
-              <option value="Task">Task</option>
-              <option value="Idea">Idea</option></select></label>
-             <button type="submit">confirm</button>
+                <input
+                  required
+                  type="text"
+                  name="content"
+                  class="border-slate-400 border w-full"
+              /></label>
+              <label class="mx-auto"
+                ><select
+                  required
+                  name="category"
+                  class="border-slate-400 border"
+                >
+                  <option value="" disabled selected hidden>Category</option>
+                  <option value="Random Thought">Random Thought</option>
+                  <option value="Task">Task</option>
+                  <option value="Idea">Idea</option>
+                </select></label
+              >
+              <button type="submit">confirm</button>
             </form>
           </div>
         </div>
-
       </main>
     </div>
     <script type="module" src="/main.js"></script>
-    
+
     <!-- <script type="module" src="/src/js/addForm.js"></script> -->
   </body>
 </html>

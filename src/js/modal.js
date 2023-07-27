@@ -9,7 +9,7 @@ export const onClickOpenModal = () => {
   window.addEventListener("keydown", onEscBtnPush);
 };
 
-export const onClickCloseModal = () => {
+export const onClickCloseModal = (id) => {
   backdropEl.className = "hidden";
   window.removeEventListener("keydown", onEscBtnPush);
 };

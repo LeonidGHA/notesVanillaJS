@@ -1,24 +1,17 @@
+import { formatDateToYYYYMMDD } from "./formatDate";
+import { dateRegex } from "../data/dataRegex";
+
 export default class userNotesClass {
   constructor(userNotes) {
     this.allNotes = userNotes;
   }
 
-  archiveNotesCount() {
-    return this.allNotes.reduce((acc, note) => {
-      if (note.archive) {
-        acc += 1;
-      }
-      return acc;
-    }, 0);
+  activeAllNotes() {
+    return this.allNotes.filter((note) => !note.archive);
   }
 
-  activeNotesCount() {
-    return this.allNotes.reduce((acc, note) => {
-      if (!note.archive) {
-        acc += 1;
-      }
-      return acc;
-    }, 0);
+  arhiveAllNotes() {
+    return this.allNotes.filter((note) => note.archive);
   }
 
   summaryNotes() {
@@ -46,16 +39,30 @@ export default class userNotesClass {
   }
 
   addNewNote(name, content, category) {
+    const dates = content.match(dateRegex);
     const newNotes = {
       id: 12,
       name: name,
-      created: new Date().toLocaleDateString(),
+      created: formatDateToYYYYMMDD(new Date()),
       category: category,
       content: content,
-      dates: "",
+      dates: dates ? dates : "",
       archive: false,
     };
 
-    this.allNotes = [...this.allNotes, newNotes];
+    this.allNotes = [newNotes, ...this.allNotes];
+  }
+
+  toggleArchiveNote(id) {
+    this.allNotes = this.allNotes.map((note) => {
+      if (note.id === Number(id)) {
+        note.archive = !note.archive;
+      }
+      return note;
+    });
+  }
+
+  deleteNote(id) {
+    this.allNotes = this.allNotes.filter((note) => note.id !== Number(id));
   }
 }

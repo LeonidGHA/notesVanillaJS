@@ -1,4 +1,6 @@
 import { notesData, renderAppPartials } from "../../main";
+import { onClickCloseModal } from "./modal";
+
 const addFormEl = document.querySelector("#form");
 
 export const onSubmitAddForm = (e) => {
@@ -8,6 +10,8 @@ export const onSubmitAddForm = (e) => {
   notesData.addNewNote(name.value, content.value, category.value);
 
   renderAppPartials();
+  addFormEl.reset();
+  onClickCloseModal();
 };
 
 addFormEl.addEventListener("submit", onSubmitAddForm);

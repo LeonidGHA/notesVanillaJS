@@ -2,7 +2,7 @@ export const userNotes = [
   {
     id: 1,
     name: "Shoping list",
-    created: new Date(4, 20, 2021).toLocaleDateString(),
+    created: "04-20-2021",
     category: "Task",
     content: "tomatos, bread",
     dates: "",
@@ -11,7 +11,7 @@ export const userNotes = [
   {
     id: 2,
     name: "Evolutions",
-    created: new Date(4, 27, 2021).toLocaleDateString(),
+    created: "04-27-2021",
     category: "Random Thought",
     content:
       "This article is about evolution in biology. For related articles, see Outline of evolution. For other uses, see Evolution (disambiguation).For a more accessible and less technical introduction to this topic, see Introduction to evolution.",
@@ -21,7 +21,7 @@ export const userNotes = [
   {
     id: 3,
     name: "New Feature",
-    created: new Date(5, 5, 2021).toLocaleDateString(),
+    created: "05-05-2021",
     category: "Idea",
     content: "tomatos, bread",
     dates: "",
@@ -30,16 +30,17 @@ export const userNotes = [
   {
     id: 4,
     name: "Vacation Planning",
-    created: new Date(7, 12, 2023).toLocaleDateString(),
+    created: "07-12-2023",
     category: "Task",
     content: "book flights, reserve hotel",
     dates: "",
     archive: false,
   },
+
   {
     id: 5,
     name: "Book Recommendations",
-    created: new Date(7, 15, 2023).toLocaleDateString(),
+    created: "07-15-2023",
     category: "Random Thought",
     content:
       "I just finished reading an amazing book! Highly recommend it to everyone.",
@@ -49,7 +50,7 @@ export const userNotes = [
   {
     id: 6,
     name: "Home Renovation",
-    created: new Date(7, 18, 2023).toLocaleDateString(),
+    created: "07-18-2023",
     category: "Task",
     content: "paint walls, fix kitchen cabinets",
     dates: "",
@@ -58,7 +59,7 @@ export const userNotes = [
   {
     id: 7,
     name: "Movie Night",
-    created: new Date(7, 20, 2023).toLocaleDateString(),
+    created: "7-20-2023",
     category: "Random Thought",
     content: "I'm in the mood for a movie marathon this weekend!",
     dates: "",
@@ -67,7 +68,7 @@ export const userNotes = [
   {
     id: 8,
     name: "Fitness Goals",
-    created: new Date(7, 23, 2023).toLocaleDateString(),
+    created: "07-23-2023",
     category: "Task",
     content: "start jogging, do yoga",
     dates: "",
