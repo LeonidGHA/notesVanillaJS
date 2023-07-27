@@ -1,15 +1,15 @@
-import { notesData, renderAppPartials } from "../../main";
+import { notesClassData, renderAppPartials } from "../../main";
 import { onClickCloseModal } from "./modal";
 
 const formEl = document.querySelector("#form");
 
-export const onSubmitForm = (e) => {
-  e.preventDefault();
-  const { name, content, category } = e.currentTarget;
+export const onSubmitForm = (event) => {
+  event.preventDefault();
+  const { name, content, category } = event.currentTarget;
 
   if (formEl.dataset.id) {
     const idNote = formEl.dataset.id;
-    notesData.editNote(idNote, name.value, content.value, category.value);
+    notesClassData.editNote(idNote, name.value, content.value, category.value);
     renderAppPartials();
     formEl.removeAttribute("data-id");
     formEl.reset();
@@ -17,7 +17,7 @@ export const onSubmitForm = (e) => {
     return;
   }
 
-  notesData.addNewNote(name.value, content.value, category.value);
+  notesClassData.addNewNote(name.value, content.value, category.value);
   renderAppPartials();
   formEl.reset();
   onClickCloseModal();

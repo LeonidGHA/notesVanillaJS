@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Vite App</title>
   </head>
   <body>
     <div id="app">
       <main class="main">
-        <ul id="AllNotes" class="flex flex-col gap-4 mb-10"></ul>
+        <div class=" mb-10 flex gap-5 justify-center" id="listName"><span id="activeName" data-list="active" class="underline underline-offset-2 font-bold duration-150">Active Note</span><span id="archiveName" data-list="archive">Archive Note</span></div>
+        <ul id="allNotes" class=" flex flex-col gap-4 mb-10 h-[40vh]  overflow-y-auto"></ul>
         <button
           type="button"
           id="toggleModal"
@@ -17,12 +19,7 @@
         >
           Create Note
         </button>
-        <ul id="summaryNotes" class="flex flex-col gap-4 mb-10">
-          <li class="grid grid-cols-3 gap-4 bg-slate-400 p-5 rounded">
-            <span class="pl-10">Note Category</span>
-            <span class="text-center">Active</span>
-            <span class="text-center">Archived</span>
-          </li>
+        <ul id="summaryNotes" class=" flex flex-col gap-4 mb-10 h-[30vh] ">
         </ul>
 
         <div id="backdrop" class="hidden">
@@ -44,6 +41,7 @@
                   type="text"
                   name="content"
                   class="border-slate-400 border w-full"
+                  
               /></label>
               <label class="mx-auto"
                 ><select
@@ -64,8 +62,6 @@
       </main>
     </div>
     <script type="module" src="/main.js"></script>
-
-    <!-- <script type="module" src="/src/js/addForm.js"></script> -->
   </body>
 </html>
-<!-- <script type="module" src="/src/js/modal.js"></script> -->
+
