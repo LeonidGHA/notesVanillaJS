@@ -57,7 +57,7 @@ export default class userNotesClass {
 
   toggleArchiveNote(id) {
     this.allNotes = this.allNotes.map((note) => {
-      if (note.id === Number(id)) {
+      if (note.id === id) {
         note.archive = !note.archive;
       }
       return note;
@@ -66,9 +66,7 @@ export default class userNotesClass {
 
   editNote(id, name, content, category) {
     const dates = content.match(dateRegex);
-    const deleteOldNote = this.allNotes.filter(
-      (note) => note.id !== Number(id)
-    );
+    const deleteOldNote = this.allNotes.filter((note) => note.id !== id);
     const newNote = {
       id: uuidv4(),
       name: name,
@@ -82,6 +80,6 @@ export default class userNotesClass {
   }
 
   deleteNote(id) {
-    this.allNotes = this.allNotes.filter((note) => note.id !== Number(id));
+    this.allNotes = this.allNotes.filter((note) => note.id !== id);
   }
 }

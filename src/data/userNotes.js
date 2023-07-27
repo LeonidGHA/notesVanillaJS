@@ -1,6 +1,6 @@
 export const userNotes = [
   {
-    id: 1,
+    id: "1",
     name: "Shoping list",
     created: "04-20-2021",
     category: "Task",
@@ -9,7 +9,7 @@ export const userNotes = [
     archive: true,
   },
   {
-    id: 2,
+    id: " 2",
     name: "Evolutions",
     created: "04-27-2021",
     category: "Random Thought",
@@ -19,7 +19,7 @@ export const userNotes = [
     archive: false,
   },
   {
-    id: 3,
+    id: "3",
     name: "New Feature",
     created: "05-05-2021",
     category: "Idea",
@@ -28,7 +28,7 @@ export const userNotes = [
     archive: true,
   },
   {
-    id: 4,
+    id: "4",
     name: "Vacation Planning",
     created: "07-12-2023",
     category: "Task",
@@ -38,7 +38,7 @@ export const userNotes = [
   },
 
   {
-    id: 5,
+    id: "5",
     name: "Book Recommendations",
     created: "07-15-2023",
     category: "Random Thought",
@@ -48,7 +48,7 @@ export const userNotes = [
     archive: true,
   },
   {
-    id: 6,
+    id: "6",
     name: "Home Renovation",
     created: "07-18-2023",
     category: "Task",
@@ -57,7 +57,7 @@ export const userNotes = [
     archive: false,
   },
   {
-    id: 7,
+    id: "7",
     name: "Movie Night",
     created: "7-20-2023",
     category: "Random Thought",
@@ -66,7 +66,7 @@ export const userNotes = [
     archive: false,
   },
   {
-    id: 8,
+    id: "8",
     name: "Fitness Goals",
     created: "07-23-2023",
     category: "Task",
